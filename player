@@ -1,0 +1,15 @@
+using UnityEngine;
+using System.Collections;
+//控制玩家移动的方法类
+public class Player : MonoBehaviour{
+    void Awake(){  
+        
+    }
+    void Update(){
+        //手机游戏上
+        Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0))
+        //键盘上
+        float h=Input.GetAxis("Horizontal");
+        float v=Input.GetAxis("Vertical");
+    }
+}
